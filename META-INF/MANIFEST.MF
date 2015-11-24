@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: lib/sqljdbc42.jar lib/mysql-connector-java-5.1.36.jar lib/
+ freemarker-2-3-18.jar
+Main-Class: com.tool.NutzEntityTool
+
