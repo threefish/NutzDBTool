@@ -2,7 +2,6 @@ package com.bean;
 
 /**
  * 实体对应的属性类
- * @author  lvzb.software@qq.com
  *
  */
 public class Property {

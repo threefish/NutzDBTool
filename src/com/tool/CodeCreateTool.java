@@ -28,11 +28,13 @@ public class CodeCreateTool {
 
     static {
         try {
-            String jarPath= CodeCreateTool.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+           String jarPath= CodeCreateTool.class.getProtectionDomain().getCodeSource().getLocation().getPath();
             tempPath= jarPath.substring(0,jarPath.lastIndexOf("/")+1)+File.separator+"template";
             tempPath = URLDecoder.decode(tempPath, "UTF-8");
-            // 指定 模板文件从何处加载的数据源，这里设置一个文件目录
+            // 打包成jar后使用该方法 模板文件从何处加载的数据源，这里设置一个文件目录
             cfg.setDirectoryForTemplateLoading(new File(tempPath));
+            //直接运行的使用这个方法
+//            cfg.setDirectoryForTemplateLoading(new File("./template"));
             cfg.setObjectWrapper(new DefaultObjectWrapper());
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
